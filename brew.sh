@@ -41,61 +41,48 @@ brew install gnupg
 # Install more recent versions of some macOS tools.
 brew install vim --with-override-system-vi
 brew install grep
-brew install openssh
+brew install openssl
 brew install screen
-brew install php
-brew install gmp
-
-# Install font tools.
-brew tap bramstein/webfonttools
-brew install sfnt2woff
-brew install sfnt2woff-zopfli
-brew install woff2
-
-# Install some CTF tools; see https://github.com/ctfs/write-ups.
-brew install aircrack-ng
-brew install bfg
-brew install binutils
-brew install binwalk
-brew install cifer
-brew install dex2jar
-brew install dns2tcp
-brew install fcrackzip
-brew install foremost
-brew install hashpump
-brew install hydra
-brew install john
-brew install knock
-brew install netpbm
-brew install nmap
-brew install pngcheck
-brew install socat
-brew install sqlmap
-brew install tcpflow
-brew install tcpreplay
-brew install tcptrace
-brew install ucspi-tcp # `tcpserver` etc.
-brew install xpdf
-brew install xz
 
 # Install other useful binaries.
+brew install 1password
 brew install ack
-#brew install exiv2
+brew install adr-tools
+brew install basecamp
+brew install chefdk
+brew install docker
+brew install dropbox
+brew install firefox
+brew install geoip
+brew install gh
 brew install git
 brew install git-lfs
-brew install gs
-brew install imagemagick --with-webp
-brew install lua
-brew install lynx
-brew install p7zip
-brew install pigz
-brew install pv
-brew install rename
-brew install rlwrap
-brew install ssh-copy-id
-brew install tree
-brew install vbindiff
-brew install zopfli
+brew install github
+brew install gitx
+brew install google-chrome
+brew install launchcontrol
+brew install microsoft-auto-update
+brew install microsoft-edge
+brew install microsoft-office
+brew install microsoft-teams
+brew install mysql@5.7
+brew install onedrive
+brew install paparazzi
+brew install rbenv
+brew install rbenv-chefdk
+brew install redis
+brew install sequel-pro
+brew install skitch
+brew install slack
+brew install tuple
+brew install v8@3.15
+brew install visual-studio-code
+brew install watch
+brew install zoomus
+
+# Install the Herok command-line client
+brew tap heroku/brew
+brew install heroku
 
 # Remove outdated versions from the cellar.
 brew cleanup
