@@ -75,7 +75,6 @@ brew install sequel-pro
 brew install skitch
 brew install slack
 brew install tuple
-brew install v8@3.15
 brew install visual-studio-code
 brew install watch
 brew install zoomus
