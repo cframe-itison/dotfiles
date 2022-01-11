@@ -37,6 +37,7 @@ brew install wget
 
 # Install GnuPG to enable PGP-signing commits.
 brew install gnupg
+brew install pinentry-mac
 
 # Install more recent versions of some macOS tools.
 brew install vim --with-override-system-vi
