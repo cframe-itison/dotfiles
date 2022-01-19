@@ -78,7 +78,7 @@ brew install slack
 brew install tuple
 brew install visual-studio-code
 brew install watch
-brew install zoomus
+brew install rectangle
 
 # Install the Herok command-line client
 brew tap heroku/brew
