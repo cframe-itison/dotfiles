@@ -72,7 +72,7 @@ brew install paparazzi
 brew install rbenv
 brew install rbenv-chefdk
 brew install redis
-brew install sequel-pro
+brew install sequel-ace
 brew install skitch
 brew install slack
 brew install tuple
