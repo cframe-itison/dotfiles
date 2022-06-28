@@ -51,7 +51,7 @@ brew install ack
 brew install adr-tools
 brew install basecamp
 brew install chefdk
-brew install docker
+brew install docker --cask
 brew install dropbox
 brew install firefox
 brew install geoip

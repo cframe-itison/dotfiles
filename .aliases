@@ -147,3 +147,5 @@ alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
 # alias path='echo -e ${PATH//:/\\n}'
+
+alias knife="docker run --rm -it  -v $HOME/.chef:/root/.chef  -v $HOME/.ssh:/root/.ssh  --platform linux/amd64 chefdockerk /opt/chefdk/embedded/bin/knife"
