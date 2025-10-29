@@ -46,43 +46,44 @@ brew install openssl
 brew install screen
 
 # Install other useful binaries.
-brew install 1password
-brew install ack
-brew install adr-tools
+# brew install 1password
+brew install dashlane
+# brew install ack
+# brew install adr-tools
 brew install basecamp
-brew install chefdk
-brew install docker --cask
-brew install dropbox
+# brew install chefdk
+# brew install docker --cask
+# brew install dropbox
 brew install firefox
-brew install geoip
+# brew install geoip
 brew install gh
 brew install git
 brew install git-lfs
-brew install github
-brew install gitx
+# brew install github
+# brew install gitx
 brew install google-chrome
-brew install launchcontrol
+# brew install launchcontrol
 brew install microsoft-auto-update
 brew install microsoft-edge
 brew install microsoft-office
 brew install microsoft-teams
-brew install mysql@5.7
+# brew install mysql@5.7
 brew install onedrive
 brew install paparazzi
-brew install rbenv
-brew install rbenv-chefdk
-brew install redis
+# brew install rbenv
+# brew install rbenv-chefdk
+# brew install redis
 brew install sequel-ace
-brew install skitch
+# brew install skitch
 brew install slack
 brew install tuple
 brew install visual-studio-code
-brew install watch
+# brew install watch
 brew install rectangle
 
 # Install the Herok command-line client
-brew tap heroku/brew
-brew install heroku
+# brew tap heroku/brew
+# brew install heroku
 
 # Remove outdated versions from the cellar.
 brew cleanup
