@@ -80,6 +80,7 @@ brew install tuple
 brew install visual-studio-code
 # brew install watch
 brew install rectangle
+brew install pv
 
 # Install the Herok command-line client
 # brew tap heroku/brew
