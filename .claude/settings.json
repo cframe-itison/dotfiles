@@ -1,13 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(docker info:*)",
-      "Bash(bundle exec rails db:migrate:*)",
-      "Bash(bundle exec rails:*)"
+      "Bash(remctl:*)"
     ]
   },
-  "enabledPlugins": {
-    "swift-lsp@claude-plugins-official": true,
-    "ruby-lsp@claude-plugins-official": true
-  }
+  "enabledPlugins": {}
 }
