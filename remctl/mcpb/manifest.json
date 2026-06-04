@@ -1,0 +1,57 @@
+{
+  "manifest_version": "0.2",
+  "name": "remctl-reminders",
+  "display_name": "RemCTL — Apple Reminders",
+  "version": "0.1.0",
+  "description": "Full-power Apple Reminders control via the RemCTL CLI.",
+  "long_description": "Exposes the RemCTL Apple Reminders CLI to Claude as two annotated MCP tools: `remctl_read` (read-only queries, auto-runnable) and `remctl_write` (create/edit/complete/delete, gated). Supports tags, sections, subtasks, smart lists, templates, recurrence, and opt-in private ReminderKit metadata. Requires the `remctl` binary installed locally (https://github.com/viticci/remctl) and macOS Reminders permission granted to the Claude app.",
+  "author": {
+    "name": "Colin Frame"
+  },
+  "license": "MIT",
+  "keywords": ["reminders", "apple", "macos", "remctl", "productivity"],
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.mjs",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/server/index.mjs"],
+      "env": {
+        "REMCTL_BIN": "${user_config.remctl_bin}",
+        "REMCTL_TIMEOUT": "${user_config.timeout_ms}"
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "remctl_read",
+      "description": "Read-only Apple Reminders queries (today, show, search, info, lists, …)."
+    },
+    {
+      "name": "remctl_write",
+      "description": "Create, edit, complete, or delete reminders, lists, smart lists, and templates."
+    }
+  ],
+  "tools_generated": false,
+  "user_config": {
+    "remctl_bin": {
+      "type": "string",
+      "title": "remctl binary path",
+      "description": "Absolute path to the remctl executable. Leave blank to auto-detect ~/.local/bin/remctl or PATH.",
+      "required": false
+    },
+    "timeout_ms": {
+      "type": "number",
+      "title": "Per-call timeout (ms)",
+      "description": "Maximum time to wait for a single remctl command.",
+      "default": 60000,
+      "required": false
+    }
+  },
+  "compatibility": {
+    "platforms": ["darwin"],
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  }
+}

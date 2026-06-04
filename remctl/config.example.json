@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "remctl": {
+      "command": "node",
+      "args": ["/Users/cframe/Work/dotfiles/remctl/remctl-mcp.mjs"]
+    }
+  }
+}
