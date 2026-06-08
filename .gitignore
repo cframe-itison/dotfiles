@@ -1,6 +1,10 @@
 # Compiled Python files
 *.pyc
 
+# Build artifacts (remctl .mcpb bundle)
+/remctl/dist/
+/remctl/mcpb/build/
+
 # Folder view configuration files
 .DS_Store
 Desktop.ini
