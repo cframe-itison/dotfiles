@@ -37,11 +37,13 @@ function resolveBin() {
 const REMCTL_BIN = resolveBin();
 // remctl shells out to sibling helpers (remctl-bridge, remctl-private). Make sure
 // the binary's own directory is on PATH for the child so it can find them.
+// Also prepend Homebrew bin dirs so the script's `#!/usr/bin/env python3` resolves
+// to Homebrew's Python (which the user can grant Full Disk Access to) rather than
+// Xcode's Developer python3, which appears earlier on Claude Desktop's sandbox PATH.
 const CHILD_ENV = { ...process.env };
-if (REMCTL_BIN.includes(path.sep)) {
-  const dir = path.dirname(REMCTL_BIN);
-  CHILD_ENV.PATH = `${dir}${path.delimiter}${CHILD_ENV.PATH || ""}`;
-}
+const PATH_PREPENDS = ["/opt/homebrew/bin", "/usr/local/bin"];
+if (REMCTL_BIN.includes(path.sep)) PATH_PREPENDS.unshift(path.dirname(REMCTL_BIN));
+CHILD_ENV.PATH = [...PATH_PREPENDS, CHILD_ENV.PATH || ""].filter(Boolean).join(path.delimiter);
 
 // remctl subcommands that only read state (no mutations). Anything not here is
 // treated as a write and routed through the gated `remctl_write` tool.
